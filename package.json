@@ -2,7 +2,7 @@
   "name": "randomideas",
   "version": "1.0.0",
   "description": "Idea sharing App",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
     "app": "node app.js",
     "dev": "nodemon app.js"
