@@ -1,0 +1,291 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #ccc;
+  color: #100f0f;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: calc(2.4rem);
+}
+.wrapper {
+  position: relative;
+}
+.heading {
+  text-align: center;
+  margin: 0 auto;
+  /*   background-color: rgb(36, 26, 26);*/
+}
+.heading p {
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 2vw;
+  top: 1.7vh;
+}
+#fa-circle-plus {
+  position: relative;
+  cursor: cell;
+
+  font-size: 2rem;
+}
+.container {
+  margin: auto;
+  /* background-color: rgba(255, 255, 255, 0.977);*/
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 98vw;
+
+  flex-wrap: wrap;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.list-item {
+  position: relative;
+
+  max-height: 80vh;
+  color: #efe;
+  margin: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background-color: #433;
+  overflow-y: auto;
+  flex-basis: 18vw;
+  flex-shrink: 0;
+}
+.idea-text {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.idea-tag {
+  background-color: rgb(26, 83, 225);
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  color: #e1e1e1;
+  font-weight: 500;
+}
+.idea-form {
+  width: 90%;
+  max-height: 90%;
+  margin: 1rem auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.6rem;
+}
+.idea-form input {
+  padding: 0.3rem;
+  margin: 0;
+  height: 1.6rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #eee;
+  font-size: 1.1rem;
+}
+.idea-form input:focus {
+  border: none;
+  outline: none;
+}
+textarea {
+  font-size: 1rem;
+  text-indent: 1rem;
+  font-weight: 500;
+  background-color: #eee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.idea-form button {
+  margin-top: 1rem;
+  align-self: center;
+  width: 30%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 3px;
+  border: none;
+  font-size: 1rem;
+  background-color: black;
+  color: #e1e1e1;
+  cursor: pointer;
+}
+.idea-form label {
+  color: #fef;
+  font-weight: 700;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  max-height: 80vh;
+  min-height: 60vh;
+  margin: 2rem auto;
+  background-color: steelblue;
+  border-radius: 5px;
+}
+
+.open {
+  display: block;
+}
+@media (max-width: 1080px) {
+  .list-item {
+    min-width: 40vw;
+    overflow-y: unset;
+    max-height: none;
+  }
+}
+
+.tag-business,
+.tag-economy,
+.tag-finance,
+.tag-finans,
+.tag-ekonomi,
+.tag-para {
+  background-color: green;
+}
+.tag-invention,
+.tag-science,
+.tag-creation .tag-yaratıcılık,
+.tag-bilim {
+  background-color: steelblue;
+}
+.tag-culture,
+.tag-art,
+.tag-kültür,
+.tag-sanat,
+.tag-tasarım {
+  background-color: orangered;
+}
+.tag-inşaat,
+.tag-mimari,
+.tag-bina,
+.tag-construction,
+.tag-building,
+.tag-architecture {
+  background-color: crimson;
+}
+.tag-farm,
+.tag-plant,
+.tag-tarım,
+.tag-bitki,
+.tag-bahçe,
+.tag-garden,
+.tag-peyzaj {
+  background-color: brown;
+}
+.tag-otomobil,
+.tag-makine,
+.tag-araç,
+.tag-aksesuar,
+.tag-aletler,
+.tag-yol,
+.tag-yakıt {
+  background-color: rgb(175, 3, 194);
+}
+.tag-meditasyon,
+.tag-kişisel,
+.tag-ritüel,
+.tag-yoga,
+.tag-spor .tag-fitness .tag-sağlık .tag-ilaç .tag-tedavi .tag-ilkyardım {
+  background-color: rgb(62, 225, 135);
+}
+.idea-author p {
+  font-weight: 600;
+  opacity: 0.7;
+}
+.idea-author span {
+  opacity: 0.6;
+  font-weight: 500;
+  font-style: oblique;
+  padding-left: 0.5rem;
+}
+.crud-options {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+.search {
+  font-size: 2rem;
+  z-index: 1;
+}
+.fa-search {
+  z-index: 4;
+  position: relative;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+.search {
+  position: absolute;
+  z-index: 1;
+  margin-left: -0.5rem;
+  border-radius: 32px;
+  left: 0;
+  top: 55%;
+  text-indent: 2.5rem;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  transition: all 200ms ease-in;
+}
+.inactive {
+  display: none;
+  width: 0vw;
+}
+.active {
+  width: 38vw;
+  display: block;
+}
+.heading p button {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding-left: -2rem;
+  cursor: pointer;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+.heading p button::before {
+  content: "x";
+  position: relative;
+  left: 0;
+  vertical-align: auto;
+  display: inline;
+  margin-right: 0.6rem;
+  color: red;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 90vw;
+    flex-direction: column;
+  }
+  .modal {
+    width: 90vw;
+  }
+  .idea-form button {
+    display: inline-block;
+    width: 50vw;
+  }
+  .list-item {
+    position: relative;
+    width: 70vw;
+    overflow-y: unset;
+    max-height: none;
+  }
+  .heading p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
